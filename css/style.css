@@ -1,0 +1,775 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* 전체 화면 높이 */
+  display: flex;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.text1 {
+  font-size: 150px;
+  font-weight: bold; /* 볼드체 설정 */
+  color: black;
+  position: absolute; /* 절대 위치 */
+  bottom: 0;
+  left: 1%;
+  z-index: 1000;
+}
+
+.rectangle {
+  width: 100%; /* 화면 가로 폭 꽉 채우기 */
+  height: 18px; /* 원하는 높이 */
+  position: absolute; /* 절대 위치 설정 */
+  top: 50%; /* 화면 중앙 정렬 */
+  transform: translateY(-50%); /* 수직 중앙으로 이동 */
+  background: linear-gradient(90deg, #ff4e50, #fc6c7c); /* 초기 그라데이션 */
+  animation: gradient-animation 6s linear infinite; /* 애니메이션 설정 */
+}
+
+@keyframes gradient-animation {
+  0% {
+    background: linear-gradient(90deg, #ff4e50, #e6112a);
+  }
+  25% {
+    background: linear-gradient(90deg, #db142b, #f54323);
+  }
+  50% {
+    background: linear-gradient(90deg, #f54323, #d50032);
+  }
+  75% {
+    background: linear-gradient(90deg, #d50032, #ff4e50);
+  }
+  100% {
+    background: linear-gradient(90deg, #ff4e50, #e6001b);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0); /* 시작 위치 */
+  }
+  50% {
+    transform: translateY(-15px); /* 위로 이동 */
+  }
+  100% {
+    transform: translateY(0); /* 원래 위치로 복귀 */
+  }
+}
+
+.speech-bubble1 {
+  position: absolute;
+  background-color: white;
+  width: 650px; /* 가로로 더 길게 설정 */
+  height: 250px; /* 세로는 좀 짧게 */
+  border-radius: 50%; /* 완벽한 원형 만들기 */
+  top: 38%;
+  left: 30%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 23px;
+  border: 1px solid black;
+  animation: float 3s ease-in-out infinite; /* 애니메이션 추가 */
+  z-index: 500;
+  overflow: hidden; /* div 모양에 맞게 이미지 클리핑 */
+  cursor: pointer;
+}
+
+.speech-bubble1 .text {
+  white-space: pre-line;
+}
+
+.speech-bubble2 {
+  position: absolute;
+  background-color: white;
+  width: 290px;
+  height: 130px;
+  border-radius: 50%;
+  top: 17%;
+  left: 20%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid black;
+  animation: float 5s ease-in-out infinite;
+}
+
+.speech-bubble3 {
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  height: 130px;
+  border-radius: 50%;
+  top: 70%;
+  left: 15%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 30px;
+  border: 1px solid black;
+  animation: float 4s ease-in-out infinite;
+}
+
+.speech-bubble4 {
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  height: 90px;
+  border-radius: 50%;
+  top: 15%;
+  left: 65%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 35px;
+  border: 1px solid black;
+  animation: float 4s ease-in-out infinite;
+  z-index: 200;
+}
+
+.speech-bubble5 {
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  height: 130px;
+  border-radius: 50%;
+  top: 60%;
+  left: 75%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 400;
+  border: 1px solid black;
+  animation: float 2s ease-in-out infinite;
+  z-index: 300;
+}
+
+.speech-bubble6 {
+  position: absolute;
+  background-color: white;
+  width: 160px;
+  height: 90px;
+  border-radius: 50%;
+  top: 40%;
+  left: 80%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 200;
+}
+
+.speech-bubble7 {
+  position: absolute;
+  background-color: white;
+  width: 150px;
+  height: 90px;
+  border-radius: 50%;
+  top: 40%;
+  left: 13%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 100;
+  border: 1px solid black;
+  animation: float 2s ease-in-out infinite;
+}
+
+.speech-bubble8 {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  top: 33%;
+  left: 88%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 5s ease-in-out infinite;
+  z-index: 200;
+}
+
+.speech-bubble9 {
+  position: absolute;
+  background-color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 50%;
+  top: 28%;
+  left: 93%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 4s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble10 {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  top: 85%;
+  left: 70%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 5s ease-in-out infinite;
+}
+
+.speech-bubble11 {
+  position: absolute;
+  background-color: white;
+  width: 125px;
+  height: 70px;
+  border-radius: 50%;
+  top: 25%;
+  left: 10%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 300;
+}
+
+.speech-bubble12 {
+  position: absolute;
+  background-color: white;
+  width: 90px;
+  height: 55px;
+  border-radius: 50%;
+  top: 55%;
+  left: 10%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+}
+
+.speech-bubble13 {
+  position: absolute;
+  background-color: white;
+  width: 80px;
+  height: 45px;
+  border-radius: 50%;
+  top: 63%;
+  left: 5%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 4.5s ease-in-out infinite;
+  z-index: 300;
+}
+
+.speech-bubble14 {
+  position: absolute;
+  background-color: white;
+  width: 70px;
+  height: 15px;
+  border-radius: 50%;
+  top: 68%;
+  left: 2%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.speech-bubble15 {
+  position: absolute;
+  background-color: white;
+  width: 115px;
+  height: 60px;
+  border-radius: 50%;
+  top: 15%;
+  left: 2%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.speech-bubble16 {
+  position: absolute;
+  background-color: white;
+  width: 80px;
+  height: 40px;
+  border-radius: 50%;
+  top: 10%;
+  left: 7%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.speech-bubble17 {
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  height: 130px;
+  border-radius: 50%;
+  top: 48%;
+  left: -4%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 25px;
+  font-weight: 300;
+  border: 1px solid black;
+  animation: float 3.5s ease-in-out infinite;
+  z-index: 200;
+}
+
+.speech-bubble18 {
+  position: absolute;
+  background-color: white;
+  width: 200px;
+  height: 100px;
+  border-radius: 50%;
+  top: 16%;
+  left: 10%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 100;
+  border: 1px solid black;
+  animation: float 4.5s ease-in-out infinite;
+  z-index: 0;
+}
+
+.speech-bubble19 {
+  position: absolute;
+  background-color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  top: 70%;
+  left: 60%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+}
+
+.speech-bubble20 {
+  position: absolute;
+  background-color: white;
+  width: 150px;
+  height: 80px;
+  border-radius: 50%;
+  top: 80%;
+  left: 40%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 200;
+}
+
+.speech-bubble21 {
+  position: absolute;
+  background-color: white;
+  width: 115px;
+  height: 60px;
+  border-radius: 50%;
+  top: 60%;
+  left: 88%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 400;
+}
+
+.speech-bubble22 {
+  position: absolute;
+  background-color: white;
+  width: 115px;
+  height: 60px;
+  border-radius: 50%;
+  top: 9%;
+  left: 22%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 5s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble23 {
+  position: absolute;
+  background-color: white;
+  width: 120px;
+  height: 70px;
+  border-radius: 50%;
+  top: 90%;
+  left: 75%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble24 {
+  position: absolute;
+  background-color: white;
+  width: 115px;
+  height: 60px;
+  border-radius: 50%;
+  top: 20%;
+  left: 80%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble25 {
+  position: absolute;
+  background-color: white;
+  width: 90px;
+  height: 20px;
+  border-radius: 50%;
+  top: 93%;
+  left: 18%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble26 {
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  height: 90px;
+  border-radius: 50%;
+  top: 2%;
+  left: 40%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble27 {
+  position: absolute;
+  background-color: white;
+  width: 110px;
+  height: 60px;
+  border-radius: 50%;
+  top: 38%;
+  left: 70%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble28 {
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  height: 90px;
+  border-radius: 50%;
+  top: 80%;
+  left: 90%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble29 {
+  position: absolute;
+  background-color: white;
+  width: 115px;
+  height: 60px;
+  border-radius: 50%;
+  top: 10%;
+  left: 60%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble30 {
+  position: absolute;
+  background-color: white;
+  width: 180px;
+  height: 90px;
+  border-radius: 50%;
+  top: 10%;
+  left: 85%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble31 {
+  position: absolute;
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  border-radius: 50%;
+  top: 85%;
+  left: 5%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 6s ease-in-out infinite;
+}
+
+.speech-bubble32 {
+  position: absolute;
+  background-color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  top: 77%;
+  left: 38%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 4s ease-in-out infinite;
+  z-index: 100;
+}
+
+.speech-bubble33 {
+  position: absolute;
+  background-color: white;
+  width: 75px;
+  height: 20px;
+  border-radius: 50%;
+  top: 25%;
+  left: 70%;
+  padding: 20px;
+  border: 1px solid black;
+  animation: float 3s ease-in-out infinite;
+  z-index: 300;
+}
+
+.speech-bubble34 {
+  position: absolute;
+  background-color: white;
+  width: 75px;
+  height: 20px;
+  border-radius: 50%;
+  top: 25%;
+  left: 60%;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 150;
+}
+
+.speech-bubble35 {
+  position: absolute;
+  background-color: white;
+  width: 75px;
+  height: 20px;
+  border-radius: 50%;
+  top: 60%;
+  left: 15%;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 100;
+}
+
+.speech-bubble36 {
+  position: absolute;
+  background-color: white;
+  width: 75px;
+  height: 20px;
+  border-radius: 50%;
+  top: 80%;
+  left: 85%;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 100;
+}
+
+.speech-bubble37 {
+  position: absolute;
+  background-color: white;
+  width: 90px;
+  height: 50px;
+  border-radius: 50%;
+  top: 30%;
+  left: 85%;
+  padding: 20px;
+  border: 1px solid black;
+  z-index: 100;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1; /* 시작과 끝은 보이게 */
+  }
+  20% {
+    opacity: 0; /* 중간에 사라지게 */
+  }
+}
+
+.circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 1;
+  animation: blink 1.3s infinite;
+}
+
+.circle1 {
+  top: 15%;
+  left: 20%;
+  background-color: aqua;
+}
+.circle2 {
+  top: 45%;
+  left: 30%;
+  background-color: rgb(0, 55, 255);
+}
+.circle3 {
+  top: 70%;
+  left: 58%;
+  background-color: rgb(255, 0, 153);
+}
+.circle4 {
+  top: 20%;
+  left: 80%;
+  background-color: rgb(0, 255, 174);
+}
+.circle5 {
+  top: 80%;
+  left: 10%;
+  background-color: rgb(255, 0, 153);
+}
+.circle6 {
+  top: 82%;
+  left: 38%;
+  background-color: aqua;
+}
+.circle7 {
+  top: 55%;
+  left: 15%;
+  background-color: rgb(255, 0, 153);
+}
+.circle8 {
+  top: 90%;
+  left: 20%;
+  background-color: rgb(153, 255, 0);
+}
+.circle9 {
+  top: 25%;
+  left: 60%;
+  background-color: rgb(255, 0, 153);
+}
+.circle10 {
+  top: 30%;
+  left: 50%;
+  background-color: rgb(255, 0, 153);
+}
+.circle11 {
+  top: 10%;
+  left: 90%;
+  background-color: rgb(153, 255, 0);
+}
+.circle12 {
+  top: 8%;
+  left: 92%;
+  background-color: rgb(144, 0, 255);
+}
+.circle13 {
+  top: 13%;
+  left: 78%;
+  background-color: rgb(85, 255, 0);
+}
+.circle14 {
+  top: 84%;
+  left: 13%;
+  background-color: rgb(85, 255, 0);
+}
+.circle15 {
+  top: 22%;
+  left: 5%;
+  background-color: rgb(85, 255, 0);
+}
+.circle16 {
+  top: 80%;
+  left: 90%;
+  background-color: rgb(85, 255, 0);
+}
+.circle17 {
+  top: 78%;
+  left: 85%;
+  background-color: rgb(0, 42, 255);
+}
+.circle18 {
+  top: 26%;
+  left: 46%;
+  background-color: rgb(13, 255, 0);
+}
+.circle19 {
+  top: 90%;
+  left: 40%;
+  background-color: rgb(157, 0, 255);
+}
+
+.circle20 {
+  top: 10%;
+  left: 33%;
+  background-color: rgb(255, 132, 0);
+}
+
+.circle21 {
+  top: 10%;
+  left: 80%;
+  background-color: rgb(255, 251, 0);
+}
+
+.circle22 {
+  top: 35%;
+  left: 85%;
+  background-color: rgb(255, 145, 0);
+}
